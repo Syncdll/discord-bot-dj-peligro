@@ -1,0 +1,37 @@
+# DJ Peligro - systemd restoration template
+# Replace the three placeholders before installing.
+# Keep executable paths absolute.
+
+[Unit]
+Description=DJ Peligro Discord Music Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__SERVICE_USER__
+WorkingDirectory=__PROJECT_DIR__
+ExecStart=__NODE_BINARY__ __PROJECT_DIR__/index.js
+Environment=NODE_ENV=production
+
+Restart=always
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectClock=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectHostname=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+LockPersonality=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target
