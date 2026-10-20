@@ -8,7 +8,7 @@ from YouTube links in voice channels.
 It provides interactive playback controls, manual
 song queues, and automatic music recommendations.
 
-Powered by **SYNC.dll**.
+Built by **SYNC.dll**.
 
 <p align="center">
   <a href="https://discord.com/oauth2/authorize?client_id=1500850699288973564">
